@@ -1,25 +1,46 @@
-# xtr
+# XTR: Rethinking the Role of Token Retrieval in Multi-Vector Retrieval
 
-TODO(b/315202559): Add a description for your new project, explain what is
-being released here, etc... Additional, the following sections are normally
-expected for all releases. Feel free to add additional sections if appropriate
-for your project.
-
-## Installation
-
-Write instructions for how the user should install your code. The instructions
-should ideally be valid when copy-pasted. You can combine this with the Usage
-section if there's no separate installation step.
+In this repository, we provide how you can run XTR (conteXtualized Token Retriever) for document retrieval. Please refer to our NeurIPS 2023 paper ([Lee et al., 2023](https://arxiv.org/abs/2304.01982)) for technical details.
 
 ## Usage
 
-Write example usage of your code. The instructions should ideally be valid when
-copy-pasted, and will be used by your technical reviewer to verify that your
-package functions correctly.
+XTR will be available through [Kaggle Models](https://www.kaggle.com/models/deepmind/xtr/). For instance, you can load XTR checkpoints as follows:
+
+```python
+## Model Usage
+import tensorflow_hub as hub
+import tensorflow as tf
+import tensorflow_text as text  # Registers the ops.
+
+hub_url = "/kaggle/input/xtr/tensorflow2/base-en/2/" # if using Kaggle Notebooks, otherwise:
+hub_url = "https://www.kaggle.com/models/deepmind/xtr/frameworks/tensorFlow2/variations/base-en/versions/2"
+model = tf.saved_model.load(hub_url)
+encoder = model.signatures["serving_default"]
+
+# Sample texts to encode.
+sample_texts = tf.constant(["dog", "Puppies are nice.", "I enjoy taking long walks along the beach with my dog."])
+sample_embeds = encoder(sample_texts)
+
+# This returns token-level representations from XTR.
+encodings = sample_embeds["encodings"].numpy()
+mask = sample_embeds["mask"].numpy()
+print(f"encodings: {encodings.shape}, mask: {mask.shape}")
+```
+
+Please check out our [Kaggle Notebook](https://www.kaggle.com/jinhyuklee/xtr-evaluation-on-beir-miracl), which contains the full inference for running document retrieval with XTR.
+
+XTR will be also available in [Huggingface](https://github.com/huggingface/transformers/commit/ad15a987f80ff9cc6a544ec503cdfb3a41d5696a).
 
 ## Citing this work
 
-Add citation details here, usually a pastable BibTeX snippet.
+```bibtex
+@article{lee2023rethinking,
+    title={Rethinking the Role of Token Retrieval in Multi-Vector Retrieval},
+    author={Lee, Jinhyuk and Dai, Zhuyun and Duddu, Sai Meher Karthik and Lei, Tao and Naim, Iftekhar and Chang, Ming-Wei and Zhao, Vincent Y},
+    journal={Advances in Neural Information Processing Systems},
+    year={2023}
+}
+```
 
 ## License and disclaimer
 
