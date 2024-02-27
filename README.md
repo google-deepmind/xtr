@@ -27,9 +27,11 @@ mask = sample_embeds["mask"].numpy()
 print(f"encodings: {encodings.shape}, mask: {mask.shape}")
 ```
 
-Please check out our [Kaggle Notebook](https://www.kaggle.com/jinhyuklee/xtr-evaluation-on-beir-miracl), which contains the full inference for running document retrieval with XTR.
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/google-deepmind/xtr/blob/main/xtr_evaluation_on_beir_miracl.ipynb)
 
-XTR will be also available in [Huggingface](https://github.com/huggingface/transformers/commit/ad15a987f80ff9cc6a544ec503cdfb3a41d5696a).
+Please check out our Notebook above, which contains the full inference for running document retrieval with XTR.
+
+XTR will be also available in [Kaggle]() and [Huggingface](https://github.com/huggingface/transformers/commit/ad15a987f80ff9cc6a544ec503cdfb3a41d5696a).
 
 ## Citing this work
 
