@@ -36,11 +36,12 @@ XTR will be also available in [Kaggle](https://www.kaggle.com/models/deepmind/xt
 ## Citing this work
 
 ```bibtex
-@article{lee2023rethinking,
-    title={Rethinking the Role of Token Retrieval in Multi-Vector Retrieval},
-    author={Lee, Jinhyuk and Dai, Zhuyun and Duddu, Sai Meher Karthik and Lei, Tao and Naim, Iftekhar and Chang, Ming-Wei and Zhao, Vincent Y},
-    journal={Advances in Neural Information Processing Systems},
-    year={2023}
+@article{lee2024rethinking,
+  title={Rethinking the role of token retrieval in multi-vector retrieval},
+  author={Lee, Jinhyuk and Dai, Zhuyun and Duddu, Sai Meher Karthik and Lei, Tao and Naim, Iftekhar and Chang, Ming-Wei and Zhao, Vincent},
+  journal={Advances in Neural Information Processing Systems},
+  volume={36},
+  year={2024}
 }
 ```
 
