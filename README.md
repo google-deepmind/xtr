@@ -4,7 +4,7 @@ In this repository, we provide how you can run XTR (conteXtualized Token Retriev
 
 ## Usage
 
-XTR will be available through [Kaggle Models](https://www.kaggle.com/models/deepmind/xtr/). For instance, you can load XTR checkpoints as follows:
+XTR is available through [Kaggle Models](https://www.kaggle.com/models/deepmind/xtr/). For instance, you can load XTR checkpoints as follows:
 
 ```python
 ## Model Usage
@@ -31,7 +31,7 @@ print(f"encodings: {encodings.shape}, mask: {mask.shape}")
 
 Please check out our Notebook above, which contains the full inference for running document retrieval with XTR.
 
-XTR will be also available in [Kaggle](https://www.kaggle.com/models/deepmind/xtr) and [Huggingface](https://github.com/huggingface/transformers/commit/ad15a987f80ff9cc6a544ec503cdfb3a41d5696a).
+XTR will be also available in [[Huggingface](https://github.com/huggingface/transformers/commit/ad15a987f80ff9cc6a544ec503cdfb3a41d5696a), soon.
 
 ## Citing this work
 
