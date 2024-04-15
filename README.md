@@ -14,8 +14,7 @@ import tensorflow_text as text  # Registers the ops.
 
 hub_url = "/kaggle/input/xtr/tensorflow2/base-en/2/" # if using Kaggle Notebooks, otherwise:
 hub_url = "https://www.kaggle.com/models/deepmind/xtr/frameworks/tensorFlow2/variations/base-en/versions/2"
-model = tf.saved_model.load(hub_url)
-encoder = model.signatures["serving_default"]
+encoder = hub.KerasLayer(hub_url, signature="serving_default", signature_outputs_as_dict=True)
 
 # Sample texts to encode.
 sample_texts = tf.constant(["dog", "Puppies are nice.", "I enjoy taking long walks along the beach with my dog."])
