@@ -30,7 +30,7 @@ print(f"encodings: {encodings.shape}, mask: {mask.shape}")
 
 Please check out our Notebook above, which contains the full inference for running document retrieval with XTR.
 
-XTR will be also available in [Huggingface](https://github.com/huggingface/transformers/commit/ad15a987f80ff9cc6a544ec503cdfb3a41d5696a), soon.
+XTR is also available in [Huggingface]([https://github.com/huggingface/transformers/commit/ad15a987f80ff9cc6a544ec503cdfb3a41d5696a](https://huggingface.co/google/xtr-base-en)) thanks to [Mujeen Sung](https://github.com/mjeensung).
 
 ## Citing this work
 
